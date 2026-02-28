@@ -322,11 +322,11 @@ RECAST's verifiable constraints enable reward function design:
 If you find this work useful, please cite our paper:
 
 ```bibtex
-@inproceedings{recast2026,
+@article{guo2025recast,
   title={RECAST: Expanding the Boundaries of LLMs' Complex Instruction Following with Multi-Constraint Data},
-  author={Your Name and Collaborators},
-  booktitle={Proceedings of the 2026 International Conference on Learning Representations},
-  year={2026}
+  author={Guo, Zhengkang and Liu, Wenhao and Xie, Mingchen and Xu, Jingwen and Huang, Zisu and Tian, Muzhao and Xu, Jianhan and Shen, Yuanzhe and Qian, Qi and Wu, Muling and others},
+  journal={arXiv preprint arXiv:2505.19030},
+  year={2025}
 }
 ```
 
