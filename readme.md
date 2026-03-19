@@ -213,6 +213,44 @@ Core utilities for constraint validation:
 - **Rule-Based Constraint Validators**: Functions to verify whether responses satisfy specific constraints (format detection, keyword matching, word/sentence length, starting/ending words, case checking, punctuation rules, etc.)
 - **Multilingual Support**: Support for detecting and processing text in multiple languages (Chinese, English, French, German, Japanese, Russian)
 
+### `find_evaluator.py` - Constraint Validator Mapping
+
+Utility script for mapping rule-based constraints to their corresponding validator functions:
+
+**Purpose**: For a given rule-based constraint, this script locates and retrieves the corresponding validation function and its parameters from the validator dictionary.
+
+**How It Works**:
+
+The script uses a two-step mapping process:
+
+1. **Constraint Type → Validator Name Mapping**: The dictionary `d` maps constraint types to their validator function names:
+   ```python
+   d = {
+       'Length': ['word_length', 'sentence_length'],
+       'Format': 'format',
+       'Keyword': 'keyword',
+       'Strat_With': 'start_with',
+       'End_With': 'end_with',
+       ...
+   }
+   ```
+
+2. **Validator Name → Validator Function**: Use the validator name to retrieve the actual validator function and parameters from `rule_evaluate_dict`:
+   ```python
+   validator_name = d['Format']  # Returns 'format'
+   evaluator = rule_evaluate_dict[validator_name]  # Returns the validator function and parameters
+   ```
+
+**Special Handling for Length Constraints**:
+- For 'Length' type constraints, distinguishes between `word_length` and `sentence_length` by checking the constraint text
+- If constraint contains 'word' → uses `d['Length'][0]` (word_length)
+- If constraint contains 'sentence' → uses `d['Length'][1]` (sentence_length)
+
+**Key Features**:
+- Maps all rule-based constraint types: Length, Format, Keyword, Start_With, End_With, All_Upper, All_lower, No_Commas
+- Retrieves corresponding validator functions and parameters from `rule_evaluate_dict`
+- Enables systematic lookup of validation functions for automatic constraint verification
+
 ### Testing Different Complexity Levels
 
 ```bash
@@ -345,6 +383,7 @@ We acknowledge:
 - [HuggingFace](https://huggingface.co/) for model hosting and dataset management
 - [LLaMA-Factory](https://github.com/hiyouga/LLaMA-Factory) for comprehensive training infrastructure
 - [veRL](https://github.com/volcengine/verl) for reinforcement learning training framework
+- **Mian Zhang** for valuable feedback and insightful optimization suggestions that significantly improved this project
 
 ---
 
