@@ -338,7 +338,7 @@ RECAST's verifiable constraints enable reward function design:
 **Resources:**
 - 📝 [Paper](https://arxiv.org/abs/2505.19030) - Full paper on arXiv
 - 🤗 [Model Hub](https://huggingface.co/wenhaoliu123) - Pre-trained models on HuggingFace
-- 📊 [Dataset Hub](https://huggingface.co/datasets/zk-guo/RECAST-30K/blob/main/RECAST-30K.json) - RECAST-30K and test sets on HuggingFace
+- 📊 [Dataset Hub](https://huggingface.co/datasets/zk-guo/RECAST/tree/main) - RECAST-30K and test sets on HuggingFace
 
 ---
 
