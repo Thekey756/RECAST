@@ -11,7 +11,7 @@
   <a href="https://huggingface.co/wenhaoliu123">
     <img alt="Model" src="https://img.shields.io/badge/Model-HuggingFace-orange">
   </a>
-  <a href="https://huggingface.co/datasets/zk-guo/RECAST-30K/blob/main/RECAST-30K.json">
+  <a href="https://huggingface.co/datasets/zk-guo/RECAST/tree/main">
     <img alt="Dataset" src="https://img.shields.io/badge/Dataset-HuggingFace-blue">
   </a>
   <a href="https://arxiv.org/abs/2505.19030">
